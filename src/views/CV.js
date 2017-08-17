@@ -14,7 +14,7 @@ export default class CV extends Component {
         return (
             <Paper style={paperStyle} zDepth={2}>
                 <div className="cv-image">
-                    <img src="https://i.imgur.com/r9MakPc.png" height="60%" width="60%"/>
+                    <img src="https://i.imgur.com/r9MakPc.png" alt="" height="60%" width="60%"/>
                 </div>
             </Paper>
         )
