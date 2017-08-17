@@ -1,18 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
 
-const styles = {
-    headline: {
-        fontSize: 24,
-        paddingTop: 16,
-        marginBottom: 12,
-        fontWeight: 400,
-    },
-    slide: {
-        padding: 10,
-    },
-};
+import ProjectTabDescription from '../components/ProjectTabDescription';
 
 export default class Projects extends Component {
 
@@ -39,23 +29,28 @@ export default class Projects extends Component {
                 >
                     <Tab label="BiaSearch" value={0} style={{color: 'grey'}}>
                     </Tab>
-                    <Tab label="CalFinder" value={1} style={{color: 'grey'}} />
-                    <Tab label="AMSAF" value={2} style={{color: 'grey'}} />
+                    <Tab label="CalFinder" value={1} style={{color: 'grey'}}/>
+                    <Tab label="AMSAF" value={2} style={{color: 'grey'}}/>
                 </Tabs>
                 <SwipeableViews
                     index={this.state.slideIndex}
                     onChangeIndex={this.handleChange}
                 >
-                    <div>
-                        <h2 style={styles.headline}>Tabs with slide effect</h2>
-                        Swipe to see the next slide.<br />
-                    </div>
-                    <div style={styles.slide}>
-                        slide n°2
-                    </div>
-                    <div style={styles.slide}>
-                        slide n°3
-                    </div>
+                    <ProjectTabDescription
+                        projectName="BiaSearch"
+                        githubLink="https://github.com/iancmcdonald/BiaSearchApi"
+                        paragraphFirstText="Explore news articles outside of your personal biases."
+                    />
+                    <ProjectTabDescription
+                        projectName="CalFinder"
+                        githubLink="https://github.com/ddreyer/mealfinder"
+                        paragraphFirstText="Get fit by finding your optimal meals from nearby fast food restaurants."
+                    />
+                    <ProjectTabDescription
+                        projectName="Automated MRI Segmentation and Registration Framework"
+                        githubLink="https://github.com/iancmcdonald/AMSAF"
+                        paragraphFirstText="Optimize image segmentation to speed up your image processing research by months."
+                    />
                 </SwipeableViews>
             </div>
         );

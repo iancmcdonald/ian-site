@@ -1,11 +1,5 @@
-.paper-centered-div {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.cv-image {
-    margin: 20px;
+.main-view {
+    margin: 5%;
     align-items: center;
     display: flex;
     justify-content: center;
