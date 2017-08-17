@@ -1,0 +1,12 @@
+.paper-centered-div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-image {
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
